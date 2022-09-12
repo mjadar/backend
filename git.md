@@ -52,9 +52,23 @@ then automatically you are switched to the main branch
 - `git pull = git fetch + git merge`
 
 ```
-# Squash last 3 commits
+# SQUASH LAST 3 COMMITS
 1- git rebase -i HEAD~3
 2- change last 2 commit keyword to squash instead of pick
 3- esc :wq
 4- another file is popup, then comment out the last 2 comment names
+```
+
+```
+# REBASE
+1- git pull // master
+2- git switch -c NEW_BRANCH
+3- make updates
+4- git checkout master
+5- git pull // master to bring updated changes into master
+6- git checkout NEW_BRANCH
+7- git rebase master // re-anchor new_branch against latest changes
+8-git checkout master
+9- git rebase NEW_BRANCH
+10- git push
 ```
